@@ -54,7 +54,7 @@ void AddACG(){
 
 		KERNEL32$SetProcessMitigationPolicy((PROCESS_MITIGATION_POLICY)ProcessSignaturePolicy, &signature, sizeof(signature));
 
-		BeaconPrintf(CALLBACK_OUTPUT, "[+] Add ACG!");
+		BeaconOutput(CALLBACK_OUTPUT, "[+] Add ACG!",12);
 
 
 		/*
@@ -82,7 +82,6 @@ void AddACG(){
 
 }
 
-void go(char* args, int len)
-{
-    AddACG();
+void go() { 
+	AddACG();
 }
